@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/Sprites/Backgrounds/The_Game__2020_03_30---Sky.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/Backgrounds/Cloud-Sky-Big.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Cloud-Sky-Big-level5.gd" type="Script" id=3]
+
+[node name="Layout_backgrund" type="Node"]
+
+[node name="The_Game__2020_03_30---Sky" type="Sprite" parent="."]
+position = Vector2( 6285.75, 13.2128 )
+scale = Vector2( 5.72602, 1.42611 )
+texture = ExtResource( 1 )
+
+[node name="Cloud-Sky-Big" type="Sprite" parent="."]
+position = Vector2( 1141.44, -60 )
+scale = Vector2( 5.46395, 1.16976 )
+texture = ExtResource( 2 )
+offset = Vector2( 864.779, -168.351 )
+script = ExtResource( 3 )

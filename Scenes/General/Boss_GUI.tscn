@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Boss_GUI.gd" type="Script" id=1]
+[ext_resource path="res://assets/GUI/Boss/Health Bar/health_bar_under.png" type="Texture" id=2]
+[ext_resource path="res://assets/GUI/Boss/Health Bar/health_bar_over.png" type="Texture" id=3]
+[ext_resource path="res://assets/GUI/Boss/Health Bar/health_bar_progress.png" type="Texture" id=4]
+
+[node name="HealthBar" type="Control"]
+margin_left = 660.0
+margin_top = 20.0
+margin_right = 1260.0
+margin_bottom = 80.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HealthBar_Under" type="TextureProgress" parent="."]
+margin_right = 600.0
+margin_bottom = 60.0
+max_value = 500.0
+value = 70.0
+texture_under = ExtResource( 2 )
+texture_over = ExtResource( 3 )
+texture_progress = ExtResource( 4 )
+tint_under = Color( 0.27451, 0.27451, 0.27451, 1 )
+tint_progress = Color( 0.870588, 0.423529, 0.423529, 1 )
+
+[node name="HealthBar_Over" type="TextureProgress" parent="HealthBar_Under"]
+margin_right = 600.0
+margin_bottom = 60.0
+max_value = 500.0
+value = 50.0
+texture_progress = ExtResource( 4 )
+
+[node name="UpdateTween" type="Tween" parent="."]
+
+[node name="PulseTween" type="Tween" parent="."]
+repeat = true
+playback/repeat = true
+
+[node name="FlashTween" type="Tween" parent="."]

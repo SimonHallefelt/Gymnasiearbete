@@ -1,0 +1,32 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/Portal/portal3.1.png" type="Texture" id=1]
+[ext_resource path="res://assets/Portal/portal3.2.png" type="Texture" id=2]
+[ext_resource path="res://assets/Portal/portal3.3.png" type="Texture" id=3]
+[ext_resource path="res://assets/Portal/portal3.4.png" type="Texture" id=4]
+[ext_resource path="res://assets/Portal/portal3.5.png" type="Texture" id=5]
+[ext_resource path="res://assets/Portal/portal3.6.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "portal",
+"speed": 36.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 67.7366
+
+[node name="Portal2" type="Node2D"]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "portal"
+frame = 4
+playing = true
+
+[node name="Portal2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal2"]
+shape = SubResource( 2 )
